@@ -23,15 +23,17 @@ body {
 
 
 .header {
-    background-color: limegreen;
+    background-color: white;
     width: 100%;
     padding: 20px;
-    margin: 15px;
     text-align: center;
     font-family: sans-serif;
     border-radius: 5px;
 }
 
+.header span {
+    color: green;
+}
 .container {
     width: 80%;
     margin: 30px;
@@ -69,4 +71,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.footer {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    font-size:large;
 }
