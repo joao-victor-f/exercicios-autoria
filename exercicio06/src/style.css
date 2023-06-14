@@ -21,6 +21,13 @@ header {
     border-radius: 10px;
 }
 
+main {
+    width: 50%;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -33,4 +40,32 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.imagem-container {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.imagem-frente {
+    position: relative;
+    z-index: 2;
+    transition: 1.2s ease-in-out;
+}
+
+.imagem-costa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.imagem-container:hover .imagem-frente{
+    opacity: 0;
 }
