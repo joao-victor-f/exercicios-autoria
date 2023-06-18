@@ -96,15 +96,23 @@ main {
     opacity: 0;
 }
 
+footer {
+    color: white;
+}
+
+footer p {
+    font-size: 1.4rem;
+}
 @media screen and (min-width: 1020px) {
     main {
         width: 50%;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 660px) {
     main {
         width: 100%;
+        border-radius: 0;
     }
 
     .grid-item {
