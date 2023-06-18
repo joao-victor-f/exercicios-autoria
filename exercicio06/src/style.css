@@ -15,8 +15,30 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: azure;
 }
 
+header {
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header img {
+    width: 40px;
+    background-color: white;
+    border-radius:100%;
+}
 main {
     width: 80%;
     display: flex;
@@ -88,5 +110,9 @@ main {
     .imagem-container img {
         width: 40px;
         height: 60px;
+    }
+
+    .grid-container {
+        gap: 5px;
     }
 }
