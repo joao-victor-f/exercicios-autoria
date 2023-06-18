@@ -3,3 +3,90 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body, html {
+    width:100%;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-container img {
+    width: 110px;
+    height: 150px;
+}
+
+.imagem-frente {
+    position: absolute;
+    z-index: 2;
+}
+
+.imagem-costa {
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.imagem-container:hover .imagem-frente{
+    opacity: 0;
+}
+
+@media screen and (min-width: 1020px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    main {
+        width: 100%;
+    }
+
+    .grid-item {
+        min-width: 40%;
+    }
+
+    .imagem-container img {
+        height: 90px;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .imagem-container img {
+        width: 40px;
+        height: 60px;
+    }
+}
