@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/old-paper-background.jpg');
+    background-attachment:fixed;
+    background-size:100%;
+}
+
+.text-container {
+    font-size: 1.2em;
+    float: left;
+}
+
+.card-container {
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+#card-1 {
+    position: absolute;
+    background-color: red;
+    z-index: 5;
+}
+
+#card-2 {
+    position: relative;
+    z-index: 2;
+    background-color: blue;
+}
+
+span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+main {
+    margin: 20px;
+    overflow: auto;
+}
+
+.cards-container:hover #card-2 {
+    z-index: 10;
+}
