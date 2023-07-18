@@ -22,6 +22,10 @@ ul {
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header {
@@ -75,4 +79,28 @@ header {
 
 .dropdown-content:hover {
     background-color: #333;
+}
+
+.container {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 80%;
+}
+
+main {
+    background-color: white;
+    border-radius: 8px;
+}
+
+article {
+    width: 100%;
+}
+
+.exercicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid black;
+    padding: 10px;
 }
