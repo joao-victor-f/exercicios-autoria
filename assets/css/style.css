@@ -87,13 +87,11 @@ header {
     max-width: 80%;
 }
 
-main {
-    background-color: white;
-    border-radius: 8px;
-}
-
 article {
     width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .exercicio {
@@ -101,6 +99,38 @@ article {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    border-bottom: 1px solid black;
     padding: 10px;
+}
+
+img {
+    height: auto;
+    width: 20%;
+}
+
+.span {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.desafio {
+    background-color: red;
+}
+
+.solucao {
+    background-color: green;
+}
+
+.link {
+    width: 20%;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
 }
