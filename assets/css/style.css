@@ -44,7 +44,7 @@ header {
 }
 
 .dropdown span {
-    background-color: gray;
+    background-color: black;
     padding: 10px;
     border-radius: 8px;
     transition: all .1s linear;
@@ -82,16 +82,16 @@ header {
 }
 
 .container {
-    margin: 20px auto;
     width: 80%;
-    max-width: 80%;
+    align-self: center;
 }
 
 article {
     width: 100%;
     background-color: white;
     border-radius: 10px;
-    margin: 20px;
+    margin-top:20px;
+    padding: 10px;
 }
 
 .exercicio {
@@ -99,7 +99,6 @@ article {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    padding: 10px;
 }
 
 img {
@@ -111,26 +110,53 @@ img {
     color: white;
     padding: 5px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .desafio {
-    background-color: red;
+    color: #ff5d5d;
 }
 
 .solucao {
-    background-color: green;
+    color: rgb(119, 255, 119);
 }
 
 .link {
-    width: 20%;
-    background-color: grey;
+    max-width: 20%;
+    background-color: black;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
     margin-top: 15px;
     color: white;
+    transition: all .4s;
 }
 
+.link:hover {
+    color: black;
+    background-color: whitesmoke;
+}
 h1 {
     text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .exercicio img {
+        align-self:center;
+    }
+
+    .exercicio .link {
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .exercicio img {
+        width: 100%;
+    }
 }
