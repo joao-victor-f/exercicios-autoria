@@ -149,6 +149,7 @@ h1 {
 
     .exercicio img {
         align-self:center;
+        border: 2px solid black;
     }
 
     .exercicio .link {
