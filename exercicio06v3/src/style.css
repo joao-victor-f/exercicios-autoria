@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+body, html {
+    width:100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: azure;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0, #120c56, #000000);
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header img {
+    width: 40px;
+    background-color: white;
+    border-radius:100%;
+}
+main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.container span {
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+}
+
+.imagem-container img {
+    width: 110px;
+    height: 150px;
+}
+
+.imagem-frente {
+    position: absolute;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.imagem-costa {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.virada .imagem-container{
+    transform:rotateY(180deg);
+}
+
+footer {
+    color: white;
+}
+
+footer p {
+    font-size: 1.4rem;
+}
+.start {
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+    font-size: 20;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media screen and (min-width: 1020px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    main {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .grid-item {
+        min-width: 40%;
+    }
+
+    .imagem-container img {
+        height: 90px;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .imagem-container img {
+        width: 40px;
+        height: 60px;
+    }
+
+    .grid-container {
+        gap: 5px;
+    }
+}
