@@ -15,7 +15,7 @@
             <th>
                 <form action="">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" spellcheck="false" autocomplete="off">
                     <label for="nota">Nota:</label>
                     <input type="number" id="nota">
                     <button id="btnConfirm">+</button>
@@ -24,15 +24,12 @@
         </tr>
     </table>
 
-    <table style="width: 100%">
+    <table id="dadosTable" style="width: 100%">
         <tr>
             <th align="center">Aluno</th>
             <th align="center">Nota</th>
         </tr>
 
-        <tr id="dadosTable">
-            
-        </tr>
     </table>
 
     <script src="../assets/script.js"></script>

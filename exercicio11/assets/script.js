@@ -7,11 +7,17 @@ const form = document.querySelector('form');
 btnConfirmar.addEventListener('click', (e) => {
     if (inputNota.value > 100 || inputNota < 0) {
         alert("nota inválida");
-    } else {
+    }
+    
+    if (inputNome.value == '' || inputNota == '') {
+        alert("os campos não podem estar vazios");
+    }
+        else {
         dataTable.innerHTML += `
-            <td align="center">${inputNome.value}</td>
+        <tr>
+            <td align="center">${inputNome.value}</th>
             <td align="center">${inputNota.value}</td>
-            <br>
+        </tr>
         `
         e.preventDefault();
     }
