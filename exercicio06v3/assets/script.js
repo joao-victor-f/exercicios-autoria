@@ -1,6 +1,8 @@
 const tempoSpan = document.querySelector('#cronometro');
 const botaoComecar = document.querySelector('.start');
 const mainGrid = document.querySelector('.grid-container');
+const container = document.querySelector('.container');
+
 const sources = [
     '../assets/ratata.jpeg',
     '../assets/fletchling.jpeg',
@@ -12,26 +14,53 @@ const sources = [
     '../assets/bulbasaur.png'
 ];
 
+const contaOcorrencias = (list) => {
+    let counts = {};
+    
+    for (const num of list) {
+        counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
 
-tempo = 20;
+    return counts;
+};
 
-const iniciarCronometro = () => {
+var tempo = 20;
+var score = 0;
+var numCartas = 16;
+
+const generalGameObserver = () => {
     console.log(tempo);
     tempoSpan.innerHTML = tempo;
     tempo--;
+
+    if (tempo == 0) {
+        container.innerHTML = `<p>Game Over. Pontuação: ${score}</p>`
+    }
 }
 
-setInterval(iniciarCronometro, 1000);
+setInterval(generalGameObserver, 1000);
 
 const gerarNumAleatorio = () => {
     return Math.floor(Math.random() * sources.length)
 }
 
-const popularGrid = (numCartas) => {
-    for (let i = 0; i < numCartas; i++) {
-        setTimeout('400');
-        mainGrid.innerHTML += createGridItem(sources[gerarNumAleatorio()]);
+const popularListaDeCartas = () => {
+    let cardList = [];
+    let i = 0;
+    while (i < numCartas) {
+        let currSrc = sources[gerarNumAleatorio()];
+        cardList.push(currSrc);
+        if (contaOcorrencias(cardList)[currSrc] > 2) {
+            i = i - 1;
+        }
     }
+
+    return cardList;
+}
+
+console.log(popularListaDeCartas());
+
+const popularGrid = (listaDeCartas) => {
 };
 
 const createGridItem = (source) => {
