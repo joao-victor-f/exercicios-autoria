@@ -21,7 +21,7 @@ const iniciarCronometro = () => {
     tempo--;
 }
 
-//setInterval(iniciarCronometro, 1000);
+setInterval(iniciarCronometro, 1000);
 
 const gerarNumAleatorio = () => {
     return Math.floor(Math.random() * sources.length)

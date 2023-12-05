@@ -5,14 +5,18 @@ const dataTable = document.getElementById('dadosTable');
 const form = document.querySelector('form');
 
 btnConfirmar.addEventListener('click', (e) => {
-    if (inputNota.value > 100 || inputNota < 0) {
+    let valido = true;
+    if (inputNota.value > 100 || inputNota.value < 0) {
         alert("nota inválida");
+        valido = false;
     }
     
-    if (inputNome.value == '' || inputNota == '') {
+    if (inputNome.value == '' || inputNota.value == '') {
         alert("os campos não podem estar vazios");
+        valido = false;
     }
-        else {
+
+    if (valido) {
         dataTable.innerHTML += `
         <tr>
             <td align="center">${inputNome.value}</th>
