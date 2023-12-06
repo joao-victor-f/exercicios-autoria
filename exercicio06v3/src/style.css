@@ -35,8 +35,12 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
+}
+
+.flex {
+    display: flex;
 }
 
 header h1 {
