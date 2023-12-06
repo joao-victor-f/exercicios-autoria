@@ -156,17 +156,6 @@ footer p {
         height: 90px;
         width: 70px;
     }
-
-    @keyframes cardPopUp {
-        from {
-            width: 0;
-            height: 0;
-        }
-        to {
-            width: 70px;
-            height: 90px;
-        }
-    }
 }
 
 @media screen and (max-width: 240px) {
@@ -177,27 +166,5 @@ footer p {
 
     .grid-container {
         gap: 5px;
-    }
-
-    @keyframes cardPopUp {
-        from {
-            width: 0;
-            height: 0;
-        }
-        to {
-            width: 40px;
-            height: 60px;
-        }
-    }
-}
-
-@keyframes cardPopUp {
-    from {
-        width: 0;
-        height: 0;
-    }
-    to {
-        width: 80px;
-        height: 120px;
     }
 }
