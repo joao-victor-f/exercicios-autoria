@@ -73,3 +73,15 @@ const popularGrid = () => {
 window.onload = popularGrid;
 
 botaoRecomecar.addEventListener('click', popularGrid);
+
+const divs = document.querySelectorAll('.grid-item');
+divs.forEach(div => {
+    div.addEventListener('click', () => {
+        console.log('a');
+        if (div.classList.contains('virada')) {
+            div.classList.remove('virada');
+        } else {
+            div.classList.add('virada');
+        };
+    });
+});
