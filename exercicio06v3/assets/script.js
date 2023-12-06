@@ -46,5 +46,3 @@ const embaralhaCartas = (cardList) => {
     }
 }
 
-embaralhaCartas(cardList);
-console.log(cardList);
