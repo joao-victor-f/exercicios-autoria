@@ -35,8 +35,12 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
+}
+
+.flex {
+    display: flex;
 }
 
 header h1 {
@@ -120,7 +124,8 @@ footer {
 footer p {
     font-size: 1.4rem;
 }
-.start {
+
+.restart {
     background-color: blue;
     font-weight: bold;
     color: white;
@@ -132,7 +137,7 @@ footer p {
     transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.start:hover {
+.restart:hover {
     background-color: rgb(30, 30, 95);
 }
 @media screen and (min-width: 1020px) {
