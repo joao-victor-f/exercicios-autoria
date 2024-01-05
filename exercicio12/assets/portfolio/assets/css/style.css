@@ -1,0 +1,163 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dropdown span {
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all .1s linear;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+}
+
+.dropdown-menu a {
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    background-color: gray;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover span {
+    background-color: inherit;
+}
+
+.dropdown-content {
+    transition: all .2s linear;
+}
+
+.dropdown-content:hover {
+    background-color: #333;
+}
+
+.container {
+    width: 80%;
+    align-self: center;
+}
+
+article {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top:20px;
+    padding: 10px;
+}
+
+.exercicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+img {
+    height: auto;
+    width: 20%;
+}
+
+.span {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.desafio {
+    color: #ff5d5d;
+}
+
+.solucao {
+    color: rgb(119, 255, 119);
+}
+
+.link {
+    max-width: 20%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    transition: all .4s;
+}
+
+.link:hover {
+    color: black;
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .exercicio img {
+        align-self:center;
+        border: 2px solid black;
+    }
+
+    .exercicio .link {
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .exercicio img {
+        width: 100%;
+    }
+}

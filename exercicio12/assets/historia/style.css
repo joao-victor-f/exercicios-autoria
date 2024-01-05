@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#historia {
+    font-size: 1.6rem;
+}
