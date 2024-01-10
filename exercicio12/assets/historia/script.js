@@ -1,4 +1,3 @@
-const historiaContainer = document.querySelector("#historia-container");
 const historiaParagraph = document.querySelector("#historia");
 
 const greetingsTitle = document.querySelector("#greetings");

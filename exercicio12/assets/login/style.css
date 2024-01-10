@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#form-questionario {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: scroll;
+  width: 50%;
+}
+
+#form-questionario input {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-questionario label {
+  font-weight: bold;
+}
+
+#form-questionario button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}

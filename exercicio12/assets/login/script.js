@@ -25,9 +25,7 @@ formulario.addEventListener("submit", (e) => {
 		localStorage.setItem("usuarios", JSON.stringify(users));
 	}
 
-	console.log(window.location);
 	//acessando pelo github pages
-	//
 	const windowUrl = window.location.hostname;
 	const href = windowUrl.includes("github.io")
 		? "/exercicios-autoria/exercicio12/src/historia.html"
