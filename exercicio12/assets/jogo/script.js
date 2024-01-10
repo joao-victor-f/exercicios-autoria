@@ -35,14 +35,15 @@ const popularPlacar = () => {
 	if (Array.isArray(scores)) {
 		scores.sort(compareByScore);
 	} else {
-		placarSection.innerHTML += `<p>Não há ninguém aqui ainda, então você pode ser o primeiro!</p>`;
+		placarSection.innerHTML +=
+			"<p>Não há ninguém aqui ainda, então você pode ser o primeiro!</p>";
 	}
 
 	if (Object.keys(scores).length === 0) return;
 
-	scores.forEach((score) => {
+	for (const score of scores) {
 		placarContainer.innerHTML += geraPosicao(score.nome, score.score);
-	});
+	}
 };
 
 popularPlacar();
@@ -58,7 +59,7 @@ const sources = [
 	"../assets/jogo/bulbasaur.png",
 ];
 
-let cardList = [
+const cardList = [
 	"../assets/jogo/ratata.jpeg",
 	"../assets/jogo/fletchling.jpeg",
 	"../assets/jogo/pidgey.jpeg",
@@ -77,7 +78,8 @@ let cardList = [
 	"../assets/jogo/bulbasaur.png",
 ];
 
-let firstCard, secondCard;
+let firstCard;
+let secondCard;
 let gridBloqueado = false;
 let score = 0;
 let matchSpree = 0;
@@ -88,8 +90,10 @@ const geraNumAleatorio = (limite) => {
 const embaralhaCartas = (list) => {
 	//algoritmo de fisher-yates
 	for (let i = 0; i < list.length; i++) {
-		let k = geraNumAleatorio(list.length);
-		[list[i], list[k]] = [list[k], list[i]];
+		[list[i], list[geraNumAleatorio(list.length)]] = [
+			list[geraNumAleatorio(list.length)],
+			list[i],
+		];
 	}
 
 	return list;
@@ -113,7 +117,7 @@ const popularGrid = () => {
 	mainGrid.innerHTML = "";
 	shuffledCardList = embaralhaCartas(cardList);
 	for (let i = 0; i < shuffledCardList.length; i++) {
-		let cardItem = document.createElement("div");
+		const cardItem = document.createElement("div");
 
 		cardItem.classList.add("grid-item");
 		cardItem.setAttribute("card-src", shuffledCardList[i]);
@@ -163,10 +167,10 @@ function flipCard() {
 }
 
 const buscamatch = () => {
-	let isMatch =
+	const isMatch =
 		firstCard.getAttribute("card-src") === secondCard.getAttribute("card-src");
 	// isMatch ? disablecards() : unflipCards();
-	if (isMatch == true) {
+	if (isMatch === true) {
 		matchSpree++;
 		score = score + matchSpree * 10;
 		scoreSpan.innerHTML = score;
@@ -199,15 +203,15 @@ const resetBoard = () => {
 };
 
 const checkIfGameIsOver = () => {
-	let cardItems = document.querySelectorAll(".grid-item");
+	const cardItems = document.querySelectorAll(".grid-item");
 	let numeroDeCartasViradas = 0;
-	cardItems.forEach((carditem) => {
-		if (carditem.classList.contains("virada")) {
+	for (const cardItem of cardItems) {
+		if (cardItem.classList.contains("virada")) {
 			numeroDeCartasViradas++;
 		}
-	});
+	}
 
-	if (numeroDeCartasViradas == 15) {
+	if (numeroDeCartasViradas === 15) {
 		return true;
 	}
 
@@ -220,7 +224,7 @@ const gameOver = () => {
 	const scoresInfo = localStorage.getItem("scores");
 	const scores = scoresInfo ? JSON.parse(scoresInfo) : [];
 
-	let currentUsername = currentUser["nome-completo"];
+	const currentUsername = currentUser["nome-completo"];
 
 	currentScore = {
 		nome: currentUsername,
@@ -228,10 +232,10 @@ const gameOver = () => {
 	};
 
 	const currentUserIndex = scores.findIndex((scoreRecord) => {
-		return scoreRecord.nome == currentScore.nome;
+		return scoreRecord.nome === currentScore.nome;
 	});
 
-	if (currentUserIndex == -1) {
+	if (currentUserIndex === -1) {
 		scores.push(currentScore);
 	} else if (scores[currentUserIndex].score < currentScore.score) {
 		scores[currentUserIndex].score = currentScore.score;
