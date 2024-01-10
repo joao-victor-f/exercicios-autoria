@@ -11,8 +11,6 @@ logout.addEventListener("click", () => {
 const currentUserInfo = localStorage.getItem("currentUserInfo");
 const currentUser = currentUserInfo ? JSON.parse(currentUserInfo) : {};
 
-console.log(currentUser);
-
 const windowUrl = window.location.hostname;
 const href = windowUrl.includes("github.io")
   ? "/exercicios-autoria/exercicio12/src/login.html"

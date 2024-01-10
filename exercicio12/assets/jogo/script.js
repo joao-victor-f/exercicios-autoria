@@ -115,9 +115,7 @@ const createGridItem = (source) => {
 
 const popularGrid = () => {
 	mainGrid.innerHTML = "";
-	console.log(cardList);
 	shuffledCardList = embaralhaCartas(cardList);
-	console.log(cardList);
 	for (let i = 0; i < shuffledCardList.length; i++) {
 		const cardItem = document.createElement("div");
 
