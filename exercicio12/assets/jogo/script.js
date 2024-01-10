@@ -89,14 +89,14 @@ const geraNumAleatorio = (limite) => {
 
 const embaralhaCartas = (list) => {
 	//algoritmo de fisher-yates
-	for (let i = 0; i < list.length; i++) {
-		[list[i], list[geraNumAleatorio(list.length)]] = [
-			list[geraNumAleatorio(list.length)],
-			list[i],
-		];
+	const listCopy = [...list];
+	const size = listCopy.length;
+	for (let i = size - 1; i > 0; i--) {
+		const j = geraNumAleatorio(i + 1);
+		[listCopy[i], listCopy[j]] = [listCopy[j], listCopy[i]];
 	}
 
-	return list;
+	return listCopy;
 };
 
 const createGridItem = (source) => {
@@ -115,7 +115,9 @@ const createGridItem = (source) => {
 
 const popularGrid = () => {
 	mainGrid.innerHTML = "";
+	console.log(cardList);
 	shuffledCardList = embaralhaCartas(cardList);
+	console.log(cardList);
 	for (let i = 0; i < shuffledCardList.length; i++) {
 		const cardItem = document.createElement("div");
 

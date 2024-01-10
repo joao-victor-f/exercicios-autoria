@@ -30,7 +30,7 @@ formulario.addEventListener("submit", (e) => {
 	//
 	const windowUrl = window.location.hostname;
 	const href = windowUrl.includes("github.io")
-		? "/exercicios-autoria/exercicio12/src/login.html"
-		: "/exercicio12/src/login.html";
+		? "/exercicios-autoria/exercicio12/src/historia.html"
+		: "/exercicio12/src/historia.html";
 	window.location.href = href;
 });
